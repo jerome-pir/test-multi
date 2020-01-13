@@ -10,6 +10,7 @@ pipeline {
               git config --global user.email $USERNAME@gmail.com
               git clone https://$USERNAME:$PASSWORD@github.com/jerome-pir/test-multi.git
               git checkout -b $GIT_BRANCH origin/$GIT_BRANCH
+              git pull
               cd test-multi
               cat values.yaml
             '''
